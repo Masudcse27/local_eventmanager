@@ -24,6 +24,7 @@ foreach ($events as $event) {
     ];
 
     $item['editurl'] = new moodle_url('/local/eventmanager/edit.php', ['id' => $event->id]);
+    $item['deleteurl'] = new moodle_url('/local/eventmanager/delete.php', ['id' => $event->id]);
     $templatecontext['list'][] = $item;
 }
 
