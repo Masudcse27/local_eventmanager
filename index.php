@@ -21,6 +21,7 @@ foreach ($events as $event) {
     $item = [
         'title' => format_string($event->title),
         'eventdate' => userdate($event->eventdate),
+        'show_url' => new moodle_url('/local/eventmanager/show.php',['id' => $event->id])
     ];
 
     $item['editurl'] = new moodle_url('/local/eventmanager/edit.php', ['id' => $event->id]);
