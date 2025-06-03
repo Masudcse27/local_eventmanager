@@ -9,7 +9,8 @@
                 <tr>
                     <th>Event Title</th>
                     <th>Event Date</th>
-                    <th>Actions</th>
+                    {{#canmanage}} <th>Actions</th> {{/canmanage}}
+                    
                 </tr>
             </thead>
             <tbody>
@@ -17,10 +18,12 @@
                     <tr>
                         <td><a href="{{show_url}}" >{{title}}</a></td>
                         <td>{{eventdate}}</td>
+                        {{#canmanage}}
                         <td>
                             <a href="{{editurl}}" class="btn btn-sm btn-secondary">Edit</a>
                             <a href="{{deleteurl}}" class="btn btn-sm btn-danger">Delete</a>
                         </td>
+                        {{/canmanage}}
                     </tr>
                 {{/list}}
             </tbody>
