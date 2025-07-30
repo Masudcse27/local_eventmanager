@@ -32,8 +32,9 @@ Admin Create event
 
 <img width="960" alt="Event list for Admin" src="https://github.com/Masudcse27/readme_images/blob/main/event_images/event_3.png">
 
-Admin edit/ delete event
-Admin and user view the individual user details 
+Admin edit/ delete event.
+
+Admin and user view the individual user details.
 
 <img width="960" alt="Event list for Admin" src="https://github.com/Masudcse27/readme_images/blob/main/event_images/event_4.png">
 
