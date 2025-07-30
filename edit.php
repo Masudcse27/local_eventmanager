@@ -32,12 +32,14 @@ if ($mform->is_cancelled()) {
         'format' => $data->description['format'],
         'category' => $data->category,
         'eventdate' => $data->eventdate,
+
     ];
     if ($data->id) {
         $record->id = $data->id;
         $DB->update_record('local_eventmanager', $record);
         redirect(new moodle_url('/local/eventmanager/index.php'), get_string('event_updated', 'local_eventmanager'));
     } else {
+        $record->timecreated = time();
         $DB->insert_record('local_eventmanager', $record);
         redirect(new moodle_url('/local/eventmanager/index.php'), get_string('event_created', 'local_eventmanager'));
     }
